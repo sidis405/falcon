@@ -3,7 +3,7 @@
 
 cd ../;
 npm install;
-npm install elixir-juice gulp-rename --save-dev;
+npm install elixir-juice gulp-rename del --save-dev;
 bower init;
 cp ./falcon/.bowerrc . ;
 cp ./falcon/gulpfile_falcon.js ./gulpfile_falcon.js ;

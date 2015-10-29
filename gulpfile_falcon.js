@@ -1,6 +1,7 @@
 var elixir = require('laravel-elixir');
 var gulp = require('gulp');
 var fs = require('fs');
+var del = require('del');
 var task = elixir.Task;
 
 require('elixir-juice'); 
@@ -16,6 +17,8 @@ elixir.extend('prioritiseJquery', function(message) {
 
 elixir(function(mix) {
     mix.less('style.less').scripts('main.js');
+
+    del.sync('./resources/assets/vendor');
 
      mix.bower({
         src: './resources/bower_components',
