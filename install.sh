@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ../;
+npm install;
 npm install elixir-juice --save-dev;
 bower init;
 cp ./falcon/.bowerrc . ;
