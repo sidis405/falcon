@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 cd ../;
 npm install;
 npm install elixir-juice --save-dev;
