@@ -4,6 +4,9 @@ var fs = require('fs');
 var del = require('del');
 var task = elixir.Task;
 
+
+require('laravel-elixir-jade');
+
 require('elixir-juice'); 
 
 elixir.extend('prioritiseJquery', function(message) {
@@ -17,6 +20,12 @@ elixir.extend('prioritiseJquery', function(message) {
 
 elixir(function(mix) {
     mix.less('style.less').scripts('main.js');
+
+    mix.jade({
+        src: '/assets/jade/',
+        dest: '/views/static/',
+        search: ['*.jade'],
+    });
 
     del.sync('./resources/assets/vendor');
 
