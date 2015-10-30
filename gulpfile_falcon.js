@@ -37,5 +37,7 @@ elixir(function(mix) {
 
     mix.scripts('./resources/assets/vendor/**/*.js', 'public/js/vendor.js');
     mix.styles('./resources/assets/vendor/**/*.css', 'public/css/vendor.css');
+
+    mix.browserSync({proxy: 'localhost:8000'});
 });
 
