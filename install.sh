@@ -13,7 +13,7 @@ cp ./falcon/jade ./resources/assets ;
 cp ./falcon/js ./resources/assets ;
 cp ./falcon/less ./resources/assets ;
 
-
+cat falcon/route_catchall.txt >> app/Http/routes.php
 echo /falcon >> .gitignore;
 echo /resources/bower_components >> .gitignore;
 echo /resources/assets/vendor >> .gitignore;
