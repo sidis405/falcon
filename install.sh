@@ -5,13 +5,14 @@ cd ../;
 npm install;
 npm install elixir-juice gulp-rename del laravel-elixir-jade --save-dev;
 bower init;
+bower install bootstrap modernizr --save;
 cp ./falcon/.bowerrc . ;
 cp ./falcon/gulpfile_falcon.js ./gulpfile_falcon.js ;
 
 
-cp ./falcon/jade ./resources/assets ;
-cp ./falcon/js ./resources/assets ;
-cp ./falcon/less ./resources/assets ;
+cp -R ./falcon/jade ./resources/assets ;
+cp -R ./falcon/js ./resources/assets ;
+cp -R ./falcon/less ./resources/assets ;
 
 cat falcon/route_catchall.txt >> app/Http/routes.php
 echo /falcon >> .gitignore;
